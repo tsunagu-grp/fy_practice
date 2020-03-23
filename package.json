@@ -1,7 +1,7 @@
 {
-  "name": "markupTemplate",
+  "name": "fy_practice",
   "version": "1.0.0",
-  "description": "markupTemplate",
+  "description": "深坂吉田のJavaScriptの練習サイト",
   "main": "gulpfile.babel.js",
   "author": "GEEK inc.",
   "license": "MIT",
