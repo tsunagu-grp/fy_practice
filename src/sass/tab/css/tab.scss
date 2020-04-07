@@ -1,3 +1,11 @@
 @charset 'UTF-8';
 
 @import "../../_various";
+
+.tab {
+  &_contentItem1,
+  &_contentItem2,
+  &_contentItem3 {
+    display: none;
+  }
+}
