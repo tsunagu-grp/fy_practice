@@ -3,9 +3,11 @@
 @import "../../_various";
 
 .tab {
-  &_contentItem1,
-  &_contentItem2,
-  &_contentItem3 {
+  &_contentItem {
     display: none;
   }
+}
+
+.is-active {
+  display: block;
 }
