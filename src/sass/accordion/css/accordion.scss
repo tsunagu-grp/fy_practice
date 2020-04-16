@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+
+@import "../../_various";
+
+h1 {
+  border-bottom: solid 2px blue;
+  font-size: 22px;
+  padding: 0 0 5px;
+  font-weight: bold;
+}
+
+.accordion {
+  &_nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto 0;
+  }
+  &_contentItem {
+    display: none;
+  }
+}

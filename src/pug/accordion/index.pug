@@ -1,0 +1,19 @@
+extends ../_tmpl/_tmpl
+
+block param
+	- var title = "アコーディオンメニュー";
+	- var keywords = "";
+	- var description = "";
+
+block stylesheet
+	link(rel="stylesheet", href="/accordion/css/accordion.css")
+
+block contents
+	.accordion
+		ul.accordion_nav
+			li.accordion_navItem アコーディオンメニュー
+		.accordion_content
+			p.accordion_contentItem アコーディオンコンテンツ1
+
+block script
+	script(src="../js/accordion/js/accordion.js")
