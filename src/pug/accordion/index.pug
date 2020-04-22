@@ -10,10 +10,11 @@ block stylesheet
 
 block contents
 	.accordion
-		ul.accordion_nav
-			li.accordion_navItem アコーディオンメニュー
-		.accordion_content
-			p.accordion_contentItem アコーディオンコンテンツ1
+		.accordion_nav
+			h2.accordion_navItem アコーディオンメニュー＋
+			p.accordion_contentItem.hide ・アコーディオンコンテンツ
+			//- h2.accordion_navItem アコーディオンメニュー＋
+			//- p.accordion_contentItem.hide ・アコーディオンコンテンツ
 
 block script
 	script(src="../js/accordion/js/accordion.js")

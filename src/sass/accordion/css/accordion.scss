@@ -10,12 +10,48 @@ h1 {
 }
 
 .accordion {
+  position: relative;
   &_nav {
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    // justify-content: space-between;
     margin: 10px auto 0;
+    height: 20px;
+    background: #efefef;
   }
   &_contentItem {
+    transition: all .2s;
+    position: relative;
+    padding: 10px 0;
+  }
+}
+.show {
+  transition: all .2s;
+  animation: show .3s linear 0s;
+}
+.hide {
+  transition: all .2s;
+  animation: hide .3s linear 0s;
+  animation-fill-mode: forwards;
+}
+@keyframes show {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    display: block;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
     display: none;
+    transform: translateY(-10px);
   }
 }
