@@ -29,14 +29,15 @@ h1 {
   animation: show .3s linear 0s;
 }
 .hide {
+  opacity: 0;
   transition: all .2s;
   animation: hide .3s linear 0s;
-  animation-fill-mode: forwards;
 }
 @keyframes show {
   0% {
     transform: translateY(-10px);
     opacity: 0;
+    display: none;
   }
   100% {
     transform: translateY(0);
@@ -47,6 +48,7 @@ h1 {
 @keyframes hide {
   0% {
     opacity: 1;
+    display: block;
     transform: translateY(0);
   }
   100% {
