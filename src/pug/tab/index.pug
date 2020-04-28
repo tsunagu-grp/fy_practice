@@ -1,0 +1,26 @@
+extends ../_tmpl/_tmpl
+
+block param
+	- var title = "タブメニュー";
+	- var keywords = "";
+	- var description = "";
+
+block stylesheet
+	link(rel="stylesheet", href="/tab/css/tab.css")
+
+block contents
+	.tab
+		ul.tab_nav
+			li.tab_navItem.is-active タブ1
+			li.tab_navItem タブ2
+			li.tab_navItem タブ3
+		.tab_content
+			.tab_contentItem.is-show
+				p タブコンテンツ1
+			.tab_contentItem
+				p タブコンテンツ2
+			.tab_contentItem
+				p タブコンテンツ3
+
+block script
+	script(src="../js/tab/js/tab.js")
