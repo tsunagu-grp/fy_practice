@@ -3,57 +3,66 @@
 @import "../../_various";
 
 h1 {
-  border-bottom: solid 2px blue;
+  border-bottom: solid 3px blue;
   font-size: 22px;
   padding: 0 0 5px;
   font-weight: bold;
 }
 
 .accordion {
-  position: relative;
   &_nav {
     display: block;
-    // justify-content: space-between;
-    margin: 10px auto 0;
-    height: 20px;
-    background: #efefef;
+    margin: 10px auto;
+  }
+  &_navItem {
+    cursor: pointer;
+    padding: 10px 0;
+    margin: 10px auto;
+    background: aliceblue;
+    border-bottom: blue 1px solid;
+    border-top: blue 1px solid;
   }
   &_contentItem {
     transition: all .2s;
     position: relative;
-    padding: 10px 0;
+    animation: slidein .3s ease-out 0s;
+  }
+  &_contentItem {
+    transition: all .2s;
+    position: relative;
+    animation: slidein .3s ease-out 0s;
   }
 }
-.show {
-  transition: all .2s;
-  animation: show .3s linear 0s;
+.is-show {
+  display: block;
 }
-.hide {
-  opacity: 0;
-  transition: all .2s;
-  animation: hide .3s linear 0s;
+
+.hidden {
+  display: none;
 }
-@keyframes show {
+
+.slideout {
+  transition: all .2s;
+  animation: slideout .3s ease-out 0s;
+}
+
+@keyframes slidein {
   0% {
     transform: translateY(-10px);
     opacity: 0;
-    display: none;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
-    display: block;
   }
 }
-@keyframes hide {
+@keyframes slideout {
   0% {
     opacity: 1;
-    display: block;
     transform: translateY(0);
   }
   100% {
     opacity: 0;
-    display: none;
     transform: translateY(-10px);
   }
 }

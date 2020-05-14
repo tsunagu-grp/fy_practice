@@ -1,7 +1,7 @@
 extends ../_tmpl/_tmpl
 
 block param
-	- var title = "アコーディオンメニュー";
+	- var title = "アコーディオンメニュー練習";
 	- var keywords = "";
 	- var description = "";
 
@@ -11,10 +11,12 @@ block stylesheet
 block contents
 	.accordion
 		.accordion_nav
-			h2.accordion_navItem アコーディオンメニュー＋
-			p.accordion_contentItem.hide ・アコーディオンコンテンツ
-			//- h2.accordion_navItem アコーディオンメニュー＋
-			//- p.accordion_contentItem.hide ・アコーディオンコンテンツ
+			h2.accordion_navItem アコーディオンメニュー1＋
+			p.accordion_contentItem.hidden ・アコーディオンコンテンツ
+			h2.accordion_navItem アコーディオンメニュー2＋
+			p.accordion_contentItem.hidden ・アコーディオンコンテンツ
+			h2.accordion_navItem アコーディオンメニュー3＋
+			p.accordion_contentItem.hidden ・アコーディオンコンテンツ
 
 block script
 	script(src="../js/accordion/js/accordion.js")
