@@ -1,0 +1,22 @@
+extends ../_tmpl/_tmpl
+
+block param
+	- var title = "アコーディオンメニュー練習";
+	- var keywords = "";
+	- var description = "";
+
+block stylesheet
+	link(rel="stylesheet", href="/accordion/css/accordion.css")
+
+block contents
+	.accordion
+		.accordion_wrapper
+			h2.accordion_nav アコーディオンメニュー1
+			div.accordion_content ・アコーディオンコンテンツ1
+			h2.accordion_nav アコーディオンメニュー2
+			div.accordion_content ・アコーディオンコンテンツ2
+			h2.accordion_nav アコーディオンメニュー3
+			div.accordion_content ・アコーディオンコンテンツ3
+
+block script
+	script(src="../js/accordion/js/accordion.js")
