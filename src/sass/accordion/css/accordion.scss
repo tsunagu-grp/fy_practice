@@ -10,59 +10,69 @@ h1 {
 }
 
 .accordion {
-  &_nav {
+  &_wrapper {
     display: block;
     margin: 10px auto;
   }
-  &_navItem {
+  &_nav {
     cursor: pointer;
     padding: 10px 0;
     margin: 10px auto;
     background: aliceblue;
+    width: 100%;
     border-bottom: blue 1px solid;
     border-top: blue 1px solid;
-  }
-  &_contentItem {
     transition: all .2s;
-    position: relative;
-    animation: slidein .3s ease-out 0s;
+    &.active,
+    &:hover {
+      background: blue;
+      color: #fff;
+     }
   }
-  &_contentItem {
-    transition: all .2s;
-    position: relative;
-    animation: slidein .3s ease-out 0s;
+  &_content {
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: height .2s ease-out;
+    &.hide {
+      height: 0;
+    }
   }
-}
-.is-show {
-  display: block;
 }
 
-.hidden {
-  display: none;
-}
 
-.slideout {
-  transition: all .2s;
-  animation: slideout .3s ease-out 0s;
-}
 
-@keyframes slidein {
-  0% {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slideout {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-}
+
+// .is-show {
+//   display: block;
+// }
+
+// .hidden {
+//   display: none;
+// }
+
+// .slideout {
+//   transition: all .2s;
+//   animation: slideout .3s ease-out 0s;
+// }
+
+// @keyframes slidein {
+//   0% {
+//     transform: translateY(-10px);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+// @keyframes slideout {
+//   0% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateY(-10px);
+//   }
+// }
